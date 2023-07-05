@@ -3,7 +3,6 @@ package com.example.commentsystem.service;
 import com.example.commentsystem.dto.CommentDTO;
 import com.example.commentsystem.dto.PostDTO;
 import com.example.commentsystem.dto.UserPostDTO;
-import com.example.commentsystem.model.Comment;
 import com.example.commentsystem.projection.CommentView;
 import com.example.commentsystem.projection.PostView;
 import com.example.commentsystem.projection.UserView;
@@ -19,8 +18,8 @@ import java.util.stream.Collectors;
 
 @Service
 public class PostService {
-    private PostRepository postRepository;
-    private CommentRepository commentRepository;
+    private final PostRepository postRepository;
+    private final CommentRepository commentRepository;
 
     @Autowired
     public PostService(PostRepository postRepository, CommentRepository commentRepository) {
