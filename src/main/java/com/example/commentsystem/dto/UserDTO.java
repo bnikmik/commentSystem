@@ -8,7 +8,7 @@ public class UserDTO {
     private Integer id;
     private String username;
 
-        public static UserDTO toDTO(User user) {
+    public static UserDTO toDTO(User user) {
         UserDTO dto = new UserDTO();
         dto.setId(user.getId());
         dto.setUsername(user.getUsername());
